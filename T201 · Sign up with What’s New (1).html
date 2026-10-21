@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>T201 · Sign up with What’s New</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f4f3;--surface:#fff;--ink:#0f1a14;--mute:#5d6b63;--line:#e3e8e5;--g:#12844c;--gd:#0e3b27;--gl:#e4f3ea;--amber:#b7791f;--abg:#fdf3dc;--blue:#2b5fb3;--bbg:#e5edf9;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#050505;--surface:#0d0d0d;--ink:#f5f5f5;--mute:#9a9a9a;--line:#232323;--g:#16874e;--gl:#0f2a1c;--amber:#f0b23c;--abg:#2b2111;--blue:#7aa7f0;--bbg:#16233d;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#050505;--surface:#0d0d0d;--ink:#f5f5f5;--mute:#9a9a9a;--line:#232323;--g:#16874e;--gl:#0f2a1c;--amber:#f0b23c;--abg:#2b2111;--blue:#7aa7f0;--bbg:#16233d;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Plus Jakarta Sans",system-ui,sans-serif;font-size:14px;line-height:1.5}
+button,a{font:inherit;color:inherit;cursor:pointer;background:none;border:0;text-decoration:none}
+button:focus-visible,a:focus-visible{outline:2px solid var(--g);outline-offset:2px}
+header{background:var(--surface);border-bottom:1px solid var(--line);position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+.bar{max-width:940px;margin:auto;padding:10px 20px;display:flex;align-items:center;gap:10px}
+.logo{width:26px;height:26px;border-radius:7px;background:var(--g);color:#fff;display:grid;place-items:center;font-weight:800;font-size:13px}
+.sp{flex:1}.brand{display:flex;align-items:center;gap:8px;font-weight:700}
+.pill{border:1px solid var(--line);background:var(--surface);border-radius:99px;padding:5px 14px;font-size:12.5px;font-weight:600}
+.pill.pri{background:var(--g);border-color:var(--g);color:#fff}
+.wrap{max-width:940px;margin:auto;padding:24px 20px 40px}
+.split{display:grid;grid-template-columns:1fr 1fr;border-radius:24px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,.08);background:var(--surface)}
+.l{background:linear-gradient(150deg,#0d3524,#14633c);color:#fff;padding:36px 32px}
+.eb{font-size:10.5px;letter-spacing:.14em;color:#6fe0a6;font-weight:600}
+.l h1{font-size:34px;line-height:1.05;letter-spacing:-.04em;margin:14px 0 12px;font-weight:800}.l h1 em{font-style:normal;color:#7de3ae}
+.l p{color:#cfe8da;max-width:34ch;margin:0 0 22px;font-size:13px}
+.fc{background:#fff;color:#0f1a14;border-radius:12px;padding:10px 12px;margin-bottom:8px;max-width:230px;font-size:11px;color:#5d6b63}
+.fc b{display:block;color:#0f1a14;font-size:12px}
+.r{padding:44px 40px;text-align:center;display:flex;flex-direction:column;align-items:center}
+.ico{width:42px;height:42px;border-radius:12px;background:var(--gl);color:var(--g);display:grid;place-items:center;font-size:18px}
+.r h2{font-size:32px;line-height:1.05;letter-spacing:-.04em;margin:18px 0 8px;font-weight:800}
+.r .s{color:var(--mute);font-size:12.5px;margin:0 0 22px}
+.goog{width:100%;border:1px solid var(--line);border-radius:99px;padding:12px;font-weight:600;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.chips{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin:12px 0 18px}
+.chips span{border:1px solid var(--line);border-radius:99px;padding:2px 10px;font-size:11px;color:var(--mute)}
+.hr{width:100%;border-top:1px solid var(--line);padding-top:14px;color:var(--mute);font-size:12px}
+.hr b,.lnk{color:var(--g);font-weight:700}
+.ver{margin-top:12px;font-size:11px;color:var(--mute)}
+.ver button{color:var(--g);font-weight:700;font-size:11px;padding:2px 6px;border-radius:6px;background:var(--gl)}.ver button:hover{text-decoration:underline}
+footer{background:var(--surface);border-top:1px solid var(--line)}
+.fi{max-width:940px;margin:auto;padding:24px 20px;display:grid;grid-template-columns:1.2fr repeat(4,1fr);gap:16px;font-size:12px}
+.fi h6{margin:0 0 8px;font-size:10.5px;letter-spacing:.12em}
+.fi a,.fi button{display:block;color:var(--mute);margin-bottom:6px;font-size:12px;text-align:left;padding:0}
+.fi button.hl{color:var(--g);font-weight:700}
+.copy{max-width:940px;margin:auto;padding:0 20px 20px;color:var(--mute);font-size:11px}
+.rel{max-width:720px;margin:auto;padding:28px 20px 40px}
+.back{color:var(--g);font-weight:700;margin-bottom:14px}
+.rel h1{font-size:32px;letter-spacing:-.03em;margin:0 0 4px;font-weight:800}.sub{color:var(--mute);margin:0 0 20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;margin-bottom:12px;text-align:left;width:100%;display:block}
+button.card:hover{border-color:var(--g)}
+.meta{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:12.5px;color:var(--mute);margin-bottom:6px}
+.tag{border-radius:99px;padding:2px 10px;font-size:12px;font-weight:700;background:var(--g);color:#fff}
+.card h3{margin:0 0 4px;font-size:17px;letter-spacing:-.01em}.card p{margin:0;color:var(--mute)}
+.cp{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}.cp span{font-size:12px;font-weight:600;padding:2px 9px;border-radius:6px}
+.c-new{background:var(--gl);color:var(--g)}.c-imp{background:var(--bbg);color:var(--blue)}.c-fix{background:var(--abg);color:var(--amber)}
+article{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:clamp(18px,4vw,34px)}
+article h1{font-size:clamp(24px,4vw,32px);line-height:1.15;margin:6px 0 10px}
+.lead{font-size:16px;color:var(--mute);margin:0 0 18px}
+article h2{font-size:16px;margin:22px 0 8px}article ul{margin:0;padding:0;list-style:none}
+article li{padding:10px 0;border-top:1px solid var(--line)}
+.cta{margin-top:24px;padding:16px;border-radius:14px;background:var(--gl);display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.cta b{flex:1;min-width:180px}.hide{display:none}
+.acc{background:var(--surface);border:1px solid var(--line);border-radius:16px;margin-bottom:10px;overflow:hidden}
+.acc.open{border-color:var(--g)}
+.ah{display:flex;align-items:center;gap:12px;width:100%;padding:16px 18px;text-align:left}
+.ah:hover{background:var(--bg)}
+.col{flex:1;min-width:0}.at{display:block;font-size:16px;font-weight:700;letter-spacing:-.01em}
+.chev{font-size:20px;color:var(--mute);transition:transform .25s}.acc.open .chev{transform:rotate(180deg)}
+.ab{display:grid;grid-template-rows:0fr;transition:grid-template-rows .25s}.acc.open .ab{grid-template-rows:1fr}
+.abi{overflow:hidden;padding:0 18px}.acc.open .abi{padding-bottom:16px}
+.abi .lead{font-size:14px;margin:0 0 6px}.abi h2{font-size:14px;margin:16px 0 6px}
+@media(prefers-reduced-motion:reduce){.ab,.chev{transition:none}}
+@media(max-width:760px){.split{grid-template-columns:1fr}.fi{grid-template-columns:1fr 1fr}.r{padding:32px 20px}}
+</style></head><body>
+<header><div class="bar"><button class="brand" id="home"><span class="logo">T</span>T201</button><span class="sp"></span><button class="pill" data-home>Sign In</button><button class="pill pri" data-home>Sign Up</button><button class="pill" id="theme" aria-label="Toggle theme">◐</button></div></header>
+
+<main>
+<section id="signin" class="wrap"><div class="split">
+<div class="l"><div class="eb">— JOIN YOUR TEAM</div><h1>Start managing your team’s records, <em>from day one.</em></h1><p>Sign up with your organization Google account to get started with employee profiles and HR records.</p>
+<div class="fc"><b>Employee profiles</b>Centralized records for every team member.</div><div class="fc"><b>Employment history</b>Track role changes and assignments.</div><div class="fc"><b>HR documents</b>Manage required documents and renewals.</div></div>
+<div class="r"><div class="ico">👥</div><h2>Create your account</h2><p class="s">Continue with Google to join your workspace.</p>
+<button class="goog">G&nbsp; Continue with Google</button>
+<div class="chips"><span>Secure SSO</span><span>Team access</span><span>Google Workspace</span></div>
+<div class="hr">Already have an account? <b>Sign in</b><br><br>By continuing, you agree to use your organization’s Google Workspace credentials.</div>
+<div class="ver">v1.6.0 · <button id="ver1">What’s new</button></div></div>
+</div></section>
+
+<section id="rel" class="rel hide">
+<button class="back" id="back">← Back to sign in</button>
+<h1>What’s new in T201</h1><p class="sub">Release notes for every version of T201.</p><div id="feed"></div>
+<div class="cta"><b>Ready to try it? Sign in with your Google Workspace account.</b><button class="pill pri" data-home>Sign in</button></div>
+</section>
+</main>
+
+<footer><div class="fi">
+<div class="brand"><span class="logo">T</span>T201</div>
+<div><h6>PRODUCT</h6><a>Employees</a><a>Records</a><a>Reports</a></div>
+<div><h6>COMPANY</h6><a>About Tito Solutions</a><a>Contact</a></div>
+<div><h6>RESOURCES</h6><a>Community</a><a>Help Center</a><button class="hl" id="ver2">What’s New</button><a>Contact</a></div>
+<div><h6>LEGAL</h6><a>Privacy Policy</a><a>Terms of Service</a><a>Cookies</a></div></div>
+<div class="copy">© 2026 Tito Solutions. All rights reserved.</div></footer>
+
+<script>
+const R=[
+{v:"1.6.0",d:"Oct 20, 2026",t:"Leave management gets a faster approval flow",sum:"Managers can approve or decline several leave requests at once, and everyone sees a clearer balance summary.",new:["Bulk approve or decline leave requests","Leave Balance tab shows used, pending and remaining days","Acknowledge memos directly from the Company Policies page"],imp:["Department filter remembers your last selection","Faster loading for employee profiles"],fix:["Pending leave counts now update right after approval","Fixed wrong dates on mobile leave requests"]},
+{v:"1.5.3",d:"Oct 6, 2026",t:"Salary history and document reminders",sum:"HR documents show clearer expiry reminders, and salary history is easier to review.",new:["Expiry badges for HR documents, such as Due in 14 days"],imp:["Salary history table is easier to scan"],fix:["Fixed audit trail showing the wrong time zone"]},
+{v:"1.5.0",d:"Sep 18, 2026",t:"Company Policies page",sum:"Employees can now read company memos and acknowledge them in one place.",new:["Company Policies page with required acknowledgment"],imp:["Cleaner dashboard layout"],fix:[]}];
+const $=id=>document.getElementById(id);
+const view=v=>{$("signin").classList.toggle("hide",v!=="s");$("rel").classList.toggle("hide",v==="s");scrollTo(0,0)};
+const sec=(t,ic,a)=>a.length?`<h2>${ic} ${t}</h2><ul>${a.map(x=>`<li>${x}</li>`).join("")}</ul>`:"";
+$("feed").innerHTML=R.map((r,i)=>`<div class="acc ${i?"":"open"}"><button class="ah" aria-expanded="${i?"false":"true"}"><span class="col"><span class="meta"><b>v${r.v}</b>· ${r.d}${i?"":'<span class="tag">Latest</span>'}</span><span class="at">${r.t}</span></span><span class="chev">⌄</span></button><div class="ab"><div class="abi"><p class="lead">${r.sum}</p>${sec("New","✨",r.new)}${sec("Improved","🔧",r.imp)}${sec("Fixed","🐛",r.fix)}</div></div></div>`).join("");
+$("feed").onclick=e=>{const h=e.target.closest(".ah");if(!h)return;const o=h.parentElement.classList.toggle("open");h.setAttribute("aria-expanded",o)};
+document.addEventListener("click",e=>{if(e.target.closest("[data-home]"))view("s")});
+$("ver1").onclick=$("ver2").onclick=()=>view("l");$("back").onclick=$("home").onclick=()=>view("s");
+$("theme").onclick=()=>{const d=document.documentElement,c=d.dataset.theme||(matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light");d.dataset.theme=c==="dark"?"light":"dark"};
+</script></body></html>
